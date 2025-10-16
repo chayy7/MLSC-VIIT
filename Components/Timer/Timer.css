@@ -1,0 +1,41 @@
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #0a0a0d; */
+  padding: 24px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  gap: 60px;
+}
+
+.timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+  position: relative;
+}
+
+.timer-value {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.timer-label {
+  color: #b9b9b9;
+  font-size: 1.2rem;
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.timer-item::after {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 2px;
+  background: #ffffff;
+  margin: 18px auto 0 auto;
+}

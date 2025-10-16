@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.app-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.content {
+  margin-top: 270px;
+  margin-bottom: 250px;
+  /* left: 100px; */
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+
+.left-side {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mlsc-logo {
+  max-width: 300px;
+  height: 270px;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.right-side h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.right-side p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.event-section {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%;
+  margin-bottom: 250px;
+  /* left: 100px; */
+
+}
+
+.event-text {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 48px;
+  letter-spacing: 0.02em;
+}
+
+.app-team-container {
+  /* max-width: 1200  px; */
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 20; 
+}
+
+.app-header h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-section {
+  margin-bottom: 32px;
+}
+
+.team-section-title {
+  text-align: left;
+  margin-left: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff9f9;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+
+
+
+
+.tilted-card-demo-text {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  
+}
+
+.custom-caption {
+  background: rgba(255, 255, 255, 0.9);
+  color: #ffffff;  
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tilted-card-figure {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  perspective: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tilted-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.tilted-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit:cover;
+  border-radius: 15px;
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(60%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tilted-card-figure:hover .tilted-card-img {
+  filter: grayscale(0%);
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  z-index: 2;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.tilted-card-caption {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: #2d2d2d;
+  opacity: 0;
+  z-index: 3;
+}
+
+
+
+
+

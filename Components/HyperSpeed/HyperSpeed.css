@@ -1,0 +1,33 @@
+.hero-particles-container {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  overflow: hidden;
+  pointer-events: none; /* by default overlay content remains clickable */
+  z-index: 0;
+
+  /* solid black background as a fallback and to ensure the hero is pitch-black */
+  background-color: #000;
+}
+
+/* When you want pointer interaction with the particles (repel/click),
+   add an "interactive" class (the component also adds it automatically
+   if interactive prop is true). This enables pointer events on the canvas.
+   If your hero has buttons above the canvas, ensure those elements have
+   pointer-events: auto and a higher z-index so they're clickable. */
+.hero-particles-container.interactive {
+  pointer-events: auto;
+}
+
+/* The canvas fills the container */
+.hero-particles-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* canvas is drawn with a black background programmatically above,
+     so keep transparency only for compositing behavior if needed */
+  background: transparent;
+  pointer-events: auto;
+}
+
+/* Example utility if you want to keep the center content fully interactive above the canvas:
+   .hero-content { position: relative; z-index: 2; pointer-events: auto; } */

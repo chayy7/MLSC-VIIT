@@ -301,7 +301,7 @@ export const StaggeredMenu = ({
             {items.length > 0 ? (
               items.map((it, idx) => (
                 <li className="sm-panel-itemWrap" key={idx}>
-                  <a className="sm-panel-item" href={it.link}>
+                  <a className="sm-panel-item" href={it.link} style={{ '--sm-num': `"${String(idx + 1).padStart(2, '0')}"` }}>
                     <span className="sm-panel-itemLabel">{it.label}</span>
                   </a>
                 </li>
@@ -312,6 +312,7 @@ export const StaggeredMenu = ({
               </li>
             )}
           </ul>
+
 
           {displaySocials && socialItems.length > 0 && (
             <div className="sm-socials" aria-label="Social links">

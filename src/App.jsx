@@ -4,6 +4,7 @@
   import logo from '../src/assets/mlsc-logo.png';
   import CountdownTimer from "../Components/Timer/Timer";
   import StaggeredMenu from '../Components/Menu/Menu';
+  import Events from '../Components/Events/Events';
 
 
   function App() {
@@ -17,16 +18,19 @@
         className="in-hero-menu"
         isFixed={false}
         position="left"
-        colors={['#B19EEF', '#5227FF', '#9B5CF6']}
-        accentColor="#5227FF"
+        colors={['#00d9ffff', '#1a7aceff', '#00e1ffff']}
+        accentColor="#0084ffff"
         items={[
           { label: 'HOME', link: '#home' },
-          { label: 'ABOUT', link: '#about' },
-          { label: 'PROJECTS', link: '#projects' },
-          { label: 'CONTACT', link: '#contact' }
+          { label: 'EVENTS', link: '#events' },
+          { label: 'TEAMS', link: '#teams' },
+          { label: 'GALLERY', link: '#gallery' }
         ]}
-        socialItems={[{ label: 'GitHub', link: '#' }, { label: 'Twitter', link: '#' }, { label: 'LinkedIn', link: '#' }]}
+        socialItems={[{ label: 'Linkedin', link: 'https://www.linkedin.com/in/mlsc-viit-671384385/' }, { label: 'Instagram', link: 'https://www.instagram.com/mlscviit/' }, { label: 'Youtube', link: 'https://www.youtube.com/@MLSCVIIT' },{ label: 'Github', link: 'https://www.youtube.com/@MLSCVIIT' }]}
+        displaySocials={true}
       />
+
+
         <div className="content">
           <div className="left-side">
             <img src={logo} alt="MLSC Logo" className="mlsc-logo" />
@@ -40,10 +44,11 @@
             </p>
           </div>
         </div>
-        {/* <div className="event-section">
-          <h1 className="event-text">Inaugural Ceremony</h1>
-          <CountdownTimer targetDate="2025-09-22T11:30:00Z" />
-        </div> */}
+        <div className="event-section">
+          {/* <h1 className="event-text">Inaugural Ceremony</h1>
+          <CountdownTimer targetDate="2025-09-22T11:30:00Z" /> */}
+          <Events />
+        </div>
 
         <div className="app-team-container">
           <header className="app-header">

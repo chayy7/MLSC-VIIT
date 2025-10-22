@@ -1,3 +1,30 @@
+/* menu.css
+   - Kept your original rules but added pointer-events adjustments so
+     non-interactive menu layers don't block underlying hover events.
+   - Re-enabled pointer-events only for interactive elements inside the menu.
+*/
+
+/* Allow pointer events to pass through decorative wrappers / pre-layers
+   so underlying content (e.g., left-side TiltedCard hover) can receive events */
+.staggered-menu-wrapper,
+.staggered-menu-wrapper.fixed-wrapper,
+.sm-prelayers {
+  pointer-events: none;
+}
+
+/* Re-enable pointer events for actual interactive controls inside the menu */
+.staggered-menu-header,
+.staggered-menu-panel,
+.staggered-menu-panel a,
+.staggered-menu-panel button,
+.sm-toggle,
+.sm-panel-item,
+.sm-socials-link,
+.sm-toggle * {
+  pointer-events: auto;
+}
+
+/* Original menu styles (kept) */
 .staggered-menu-wrapper {
   position: relative;
   width: 100%;

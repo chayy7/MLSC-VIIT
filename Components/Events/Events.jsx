@@ -12,7 +12,7 @@ const upcoming = [
     location: 'Main Auditorium',
     description:
       'Upcoming Event',
-    image: 'https://i.postimg.cc/3R26t5wr/404-page-best-practice.png',
+    image: 'https://i.postimg.cc/Jnf4Q9Rv/Untitled-design.jpg',
     ctaLabel: 'Register',
     ctaLink: '#',
   },
@@ -22,7 +22,7 @@ const upcoming = [
     date: '404',
     location: 'Hall B',
     description: 'Upcoming Event',
-    image: 'https://i.postimg.cc/3R26t5wr/404-page-best-practice.png',
+    image: 'https://i.postimg.cc/Jnf4Q9Rv/Untitled-design.jpg',
     ctaLabel: 'Register',
     ctaLink: '#',
   },

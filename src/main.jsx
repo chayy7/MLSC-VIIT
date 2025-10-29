@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App"; // your existing home page (keep as-is)
+import App from "./App"; 
 import TeamsPage from "../Components/Pages/TeamsPage";
 import "./index.css";
 

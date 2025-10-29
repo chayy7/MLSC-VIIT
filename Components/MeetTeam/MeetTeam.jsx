@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./MeetTeam.css";
 // Adjust path & filename exactly as in your project (case-sensitive)
-import meetBg from "../../src/assets/team-bg.jpg";
+import meetBg from "../../src/assets/team-bg.JPG";
 
 const MeetTeam = () => {
   const navigate = useNavigate();

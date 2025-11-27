@@ -1,13 +1,13 @@
 
 .meet-team-hero {
-  position: relative;
+  position: absolute;
 
   /* Full-bleed width and centered regardless of parent container */
-  width: 108.25vw;
-  margin-left: calc(50% - 50vw);
+  width: 110vw;
+  margin-left: calc(45% - 50vw);
 
   /* Adjust height as needed */
-  height: clamp(800px, 42vh, 700px);
+  height: clamp(850px, 42vh, 700px);
 
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
   position: absolute;
   inset: 0;
   background-repeat: no-repeat;
-  background-size:108.25vw;
+  background-size:110vw;
   background-position: center;
   transform: scale(1.02);
   /* filter: grayscale(0%) brightness(1); */

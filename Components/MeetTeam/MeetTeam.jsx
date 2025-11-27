@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./MeetTeam.css";
-// Adjust path & filename exactly as in your project (case-sensitive)
 import meetBg from "../../src/assets/team-bg.JPG";
 
 const MeetTeam = () => {
@@ -9,7 +8,6 @@ const MeetTeam = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    // navigate to the client-side /teams route registered in main.jsx
     navigate("/teams");
   };
 

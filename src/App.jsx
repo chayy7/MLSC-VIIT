@@ -6,6 +6,14 @@ import StaggeredMenu from '../Components/Menu/Menu';
 import Events from '../Components/Events/Events';
 import Teams from '../Components/Teams/Teams';
 import MeetTeam from '../Components/MeetTeam/MeetTeam';
+import { Carousel } from '../Components/Carousel/carousel';
+
+const carouselData = [
+  { src: "https://i.postimg.cc/3xmyzhsr/1.png", alt: "slide 1" , link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556626220&sort_by=relevance"},
+  { src: "https://i.postimg.cc/N0WQt2m3/2.png", alt: "slide 2" , link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556626220&sort_by=relevance"},
+  { src: "https://i.postimg.cc/63mnt0YN/3.png", alt: "slide 3", link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556627453&sort_by=relevance" }
+];
+
 
 function App() {
   return (
@@ -35,6 +43,7 @@ function App() {
         displaySocials={true}
       />
 
+
       <div className="content">
         <div className="left-side">
           <img src={logo} alt="MLSC Logo" className="mlsc-logo" />
@@ -57,16 +66,26 @@ function App() {
 
       {/* <div className="app-team-container">
         <header className="app-header">
-          <h1>Meet Our MLSC Team</h1>
+        <h1>Meet Our MLSC Team</h1>
         </header>
-
-       
+        
+        
         <Teams />
-      </div> */}
+        </div> */}
       <div>
        
         <MeetTeam />
+        
       </div>
+
+
+      
+      <div>
+        <Carousel data={carouselData} />
+      </div>
+      
+
+      
     </div>
   );
 }

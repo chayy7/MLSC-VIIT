@@ -8,6 +8,9 @@ import Teams from '../Components/Teams/Teams';
 import MeetTeam from '../Components/MeetTeam/MeetTeam';
 import { Carousel } from '../Components/Carousel/carousel';
 
+
+
+
 const carouselData = [
   { src: "https://i.postimg.cc/3xmyzhsr/1.png", alt: "slide 1" , link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556626220&sort_by=relevance"},
   { src: "https://i.postimg.cc/N0WQt2m3/2.png", alt: "slide 2" , link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556626220&sort_by=relevance"},

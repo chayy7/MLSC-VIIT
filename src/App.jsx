@@ -6,7 +6,7 @@ import StaggeredMenu from '../Components/Menu/Menu';
 import Events from '../Components/Events/Events';
 import Teams from '../Components/Teams/Teams';
 import MeetTeam from '../Components/MeetTeam/MeetTeam';
-import { Carousel } from '../Components/Carousel/carousel';
+import { Carousel } from '../Components/Carousel/Carousel';
 
 
 

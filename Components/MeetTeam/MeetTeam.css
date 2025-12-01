@@ -18,6 +18,7 @@
 
 /* FULLY RESPONSIVE BACKGROUND IMAGE */
 .meet-team-bg {
+
   position: absolute;
   inset: 0;
 
@@ -28,6 +29,8 @@
   transform: scale(1.1);
   transition: transform 600ms ease;
 }
+
+
 
 /* DARK GRADIENT LAYER */
 .meet-team-overlay {
@@ -70,6 +73,8 @@
 }
 
 /* CTA BUTTON */
+
+
 .meet-team-cta {
   display: inline-flex;
   align-items: center;

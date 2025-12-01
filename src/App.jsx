@@ -35,6 +35,7 @@ function App() {
           { label: 'HOME', link: '#home' },
           { label: 'EVENTS', link: '#events' },
           { label: 'TEAMS', link: '#teams' },
+          { label: 'Jobs & Careers', link: '#jobs' },
           { label: 'GALLERY', link: '#gallery' }
         ]}
         socialItems={[

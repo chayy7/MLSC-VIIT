@@ -28,15 +28,16 @@ export const Carousel = ({ data }) => {
             rel="noopener noreferrer"
             className={slide === idx ? "slide-link" : "slide-link slide-hidden"}
           >
-            <img
-              src={item.src}
-              alt={item.alt}
-              className="slide"
-            />
+            <img src={item.src} alt={item.alt} className="slide" />
           </a>
         ))}
 
         <BsArrowRightCircleFill onClick={nextSlide} className="arrow arrow-right" />
+
+        {/* 🔥 Slide Counter Added */}
+        <div className="slide-counter">
+          {slide + 1} / {data.length}
+        </div>
       </div>
     </div>
   );

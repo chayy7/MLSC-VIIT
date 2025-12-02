@@ -58,7 +58,7 @@ export default function HeroParticles({
 
     function makeParticle(w, h, type = "main") {
       if (type === "bokeh") {
-        const size = rand(14, 48);
+        const size = rand(1, 2);
         return {
           x: rand(0, w),
           y: rand(0, h),
@@ -72,7 +72,7 @@ export default function HeroParticles({
         };
       }
       // main particle: positive vx biased to the right
-      const size = rand(0.9, 3.4);
+      const size = rand(1.75,2.0);
       const vx = rand(driftMin * 0.6, driftMin * 1.2);
       const vy = rand(-0.06, 0.06);
       // give each main particle a small random opacity around the base particleAlpha

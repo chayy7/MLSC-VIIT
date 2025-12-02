@@ -7,7 +7,7 @@ import Events from '../Components/Events/Events';
 import Teams from '../Components/Teams/Teams';
 import MeetTeam from '../Components/MeetTeam/MeetTeam';
 import { Carousel } from '../Components/Carousel/Carousel';
-
+import Gallery from '../Components/Gallery/Gallery'
 
 
 
@@ -16,6 +16,17 @@ const carouselData = [
   { src: "https://i.postimg.cc/N0WQt2m3/2.png", alt: "slide 2" , link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556626220&sort_by=relevance"},
   { src: "https://i.postimg.cc/63mnt0YN/3.png", alt: "slide 3", link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556627453&sort_by=relevance" }
 ];
+
+
+
+
+const demoItems = [
+  { link: '/gallery', text: 'MLSC REALM', image: 'https://i.postimg.cc/52S5pW0K/DSC-0461-%282%29.jpg' },
+  { link: '/gallery', text: 'MLSC ODYSSEY', image: 'https://i.postimg.cc/ZqZmtpJm/DSC-0440-%282%29.jpg' },
+  { link: '/gallery', text: 'MLSC ORBIT', image: 'https://i.postimg.cc/DfY59h78/DSC-0346-%282%29.jpg' },
+  { link: '/gallery', text: 'MLSC SPECTRA', image: 'https://i.postimg.cc/N0pRR8M1/DSC-0445-%282%29.jpg' }
+];
+
 
 
 function App() {
@@ -35,7 +46,7 @@ function App() {
           { label: 'HOME', link: '#home' },
           { label: 'EVENTS', link: '#events' },
           { label: 'TEAMS', link: '#teams' },
-          { label: 'Jobs & Careers', link: '#jobs' },
+          { label: 'Jobs ', link: '#jobs' },
           { label: 'GALLERY', link: '#gallery' }
         ]}
         socialItems={[
@@ -86,6 +97,10 @@ function App() {
       
       <div>
         <Carousel data={carouselData} />
+      </div>
+
+      <div id="gallery" className="gallery-full">
+        <Gallery items={demoItems} />
       </div>
       
 

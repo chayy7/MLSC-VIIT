@@ -14,6 +14,7 @@
     "@react-three/fiber": "^9.4.0",
     "framer-motion": "^12.23.16",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.555.0",
     "ogl": "^1.0.11",
     "postprocessing": "^6.37.8",
     "react": "^19.2.0",

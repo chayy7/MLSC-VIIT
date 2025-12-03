@@ -45,9 +45,9 @@ function App() {
         items={[
           { label: 'HOME', link: '#home' },
           { label: 'EVENTS', link: '#events' },
-          { label: 'TEAMS', link: '#teams' },
+          { label: 'TEAMS', link: '/teams' },
           { label: 'Jobs ', link: '#jobs' },
-          { label: 'GALLERY', link: '#gallery' }
+          { label: 'GALLERY', link: '/gallery' }
         ]}
         socialItems={[
           { label: 'Linkedin', link: 'https://www.linkedin.com/in/mlsc-viit-671384385/' },

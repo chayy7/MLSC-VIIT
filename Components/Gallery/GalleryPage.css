@@ -1,0 +1,43 @@
+.gallery-container {
+  width: 100vw;
+  padding: 20px;
+}
+
+/* 3 Images per row ALWAYS on large screen */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* gap: 20px; */
+}
+
+/* Each image box */
+.gallery-item {
+  padding: 15px;
+}
+
+/* Uniform image size */
+.gallery-item img {
+  width: 400px;
+  height: 300px; /* Same height */
+  object-fit: cover; /* Contain properly */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,25 +1,57 @@
+/* -----------------------------------
+   HERO SECTION CENTER
+----------------------------------- */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Running text wrapper */
+.scroll-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+/* Scroll Down text (no animation) */
+.scroll-down-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* -----------------------------------
+   GALLERY SECTION (Original CSS)
+----------------------------------- */
+
 .gallery-container {
   width: 100vw;
-  padding: 20px;
+  /* padding: 10px; */
 }
 
 /* 3 Images per row ALWAYS on large screen */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  /* gap: 20px; */
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Each image box */
 .gallery-item {
-  padding: 15px;
+  padding: 10px;
+  display: flex; /* fix overflow for 400px width */
+  justify-content: center;
 }
 
 /* Uniform image size */
 .gallery-item img {
-  width: 400px;
-  height: 300px; /* Same height */
-  object-fit: cover; /* Contain properly */
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;

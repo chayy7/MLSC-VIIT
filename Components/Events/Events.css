@@ -140,7 +140,7 @@
 }
 .es-btn {
   display: inline-block;
-  background: linear-gradient(90deg, var(--es-accent), #6bcb77 120%);
+  background: linear-gradient(90deg, var(--es-accent), #42bad8 120%);
   color: #fff;
   padding: 0.6rem 0.85rem;
   border-radius: 999px;

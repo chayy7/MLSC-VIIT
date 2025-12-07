@@ -1,19 +1,17 @@
 .meet-team-hero {
   position: relative;
-  width: 125%;
-  max-width: 100vw;
-
-  height: clamp(820px, 55vh, 500px);
-
+  width: 100%;           /* full viewport width */
+  height: 100vh;          /* full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
-  margin: 0 auto; 
+  margin: 0;              /* remove any default margin */
+  padding: 0;
   box-sizing: border-box;
 }
+
+
 
 
 /* FULLY RESPONSIVE BACKGROUND IMAGE */
@@ -26,7 +24,7 @@
   background-size: cover;        /* FIX: image fits all screens */
   background-position: center;   /* centers important part */
 
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 600ms ease;
 }
 
@@ -97,14 +95,17 @@
 }
 
 /* MOBILE VIEW */
-@media (max-width: 640px) {
+@media (max-width: 780px) {
   .meet-team-sub { 
-    display: none;
+    /* display: none; */
+    font-size: 1rem; 
   }
   .meet-team-hero { 
-    height: 320px; 
+    height: 300px; 
+    width: 400px;
+    /* object-fit: cover; */
   }
   .meet-team-title { 
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
   }
 }

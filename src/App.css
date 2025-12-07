@@ -1,67 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* App.css - responsive rewrite (mobile-first) */ /* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"); /* ------------- Global helpers ------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 600px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+} /* Make media scale */
+/* 
+@media (min-width: 601px) {
+  html,
+  body,
+  #root {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+  }
+} */
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} /* Container utility */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; /* padding-left: 1rem; */ /* padding-right: 10rem; */
+} /* ------------- App shell ------------- */
 .app-container {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  /* padding: 1rem; */
   background: none;
   z-index: 1;
-}
-
+} /* Background: prefer 100% rather than 100vw to avoid scrollbar + background fixed */
 .background {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%; /* changed from 100vw */
   height: 100vh;
   z-index: 0;
-}
-
+  pointer-events: none; /* let clicks pass through */
+} /* ------------- Hero / Content ------------- */ /* Mobile-first layout: stacked */
 .content {
-  margin-top: 270px;
-  margin-bottom: 250px;
-  left: 140px;
+  margin-top: 150px; /* reduced for small screens */
+  margin-bottom: 200px;
   position: relative;
   z-index: 10;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
   align-items: center;
-  gap: 7rem;
-}
-
+  text-align: center;
+  padding: 0 1rem;
+} /* left / right become stacked on small screens */
 .left-side {
   flex: 0 0 auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
-
 .mlsc-logo {
-  max-width: 300px;
-  height: 270px;
-}
-
+  max-width: 220px; /* smaller on small screens */
+  height: auto;
+  width: auto;
+  display: block;
+} /* hero text */
 .right-side {
-  
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
+  max-width: 720px;
 }
-
 .right-side h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+  color: #ffffff;
+  line-height: 1.05;
 }
-
 .right-side p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
-}
-
+  color: #e8eef8;
+  margin: 0.5rem 0 0;
+} /* ------------- Event section / team / gallery ------------- */
 .event-section {
   position: relative;
   z-index: 10;
@@ -71,142 +127,147 @@
   align-items: center;
   min-height: 40vh;
   width: 100%;
-  margin-bottom: 250px;
-  left: 140px;
-
-}
-
-.event-text {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 48px;
-  letter-spacing: 0.02em;
-}
-
+  margin-bottom: 120px;
+  padding: 0 1rem;
+} /* use container for centered content */
 .app-team-container {
-  /* max-width: 1200  px; */
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 1rem;
   position: relative;
-  z-index: 20; 
-}
-
-.app-header h1 {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.team-section {
-  margin-bottom: 32px;
-}
-
-.team-section-title {
-  text-align: left;
-  margin-left: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff9f9;
-}
-
+  z-index: 20;
+  width: 100%;
+  max-width: 1200px;
+} /* Teams grid */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 24px;
-}
-
-
-
-
-
-.tilted-card-demo-text {
-  font-weight: 600;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin: 0;
-  
-}
-
-.custom-caption {
-  background: rgba(255, 255, 255, 0.9);
-  color: #ffffff;  
-  font-weight: 500;
-  font-size: 12px;
-  font-family: 'Poppins', sans-serif;
-}
-
+  justify-content: center;
+  gap: 1.25rem;
+} /* ------------- Tilted card (kept but responsive) ------------- */
 .tilted-card-figure {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   perspective: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.tilted-card-inner {
-  position: relative;
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-}
-
 .tilted-card-img {
   position: absolute;
   top: 0;
   left: 0;
-  object-fit:cover;
+  object-fit: cover;
   border-radius: 15px;
   will-change: transform;
   width: 100%;
   height: 100%;
   filter: grayscale(60%);
   transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.tilted-card-figure:hover .tilted-card-img {
-  filter: grayscale(0%);
-}
-
-.tilted-card-overlay {
-  position: absolute;
-  z-index: 2;
-  padding: 4px 8px;
-  border-radius: 5px;
-  color: #fff;
-}
-
-.tilted-card-caption {
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 4px;
-  background-color: #fff;
-  padding: 4px 10px;
-  font-size: 10px;
-  color: #2d2d2d;
-  opacity: 0;
-  z-index: 3;
-}
-
-
-
+} /* ------------- Gallery full width fix ------------- */ /* Previously width:125% caused overflow; keep it inside container and responsive */
 .gallery-full {
-  width: 125%;
+  width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 80px;
   padding: 20px 0;
   position: relative;
   z-index: 10;
-  height: 600px;
+  height: auto; /* allow to grow */
+} /* ------------- Footer spacing ------------- */ /* Footer should sit at the bottom nicely */
+footer,
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+} /* ------------- Utility helpers ------------- */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+} /* ------------- Responsive breakpoints ------------- */ /* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  html {
+    overflow-x: hidden;
+  }
+  .content {
+    margin-top: 250px;
+    margin-bottom: 160px;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  .content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .left-side {
+    flex: 0 0 40%;
+    justify-content: flex-end;
+  }
+  .mlsc-logo {
+    max-width: 260px;
+  }
+  .right-side h1 {
+    font-size: 2rem;
+  }
+  .right-side p {
+    font-size: 1.05rem;
+  }
+  .team-grid {
+    justify-content: flex-start;
+  }
+} /* Desktop / large */
+@media (min-width: 1025px) {
+  html {
+    overflow-x: hidden;
+  }
+  .content {
+    margin-top: 300px;
+    margin-bottom: 220px;
+    padding: 0 3rem;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .left-side {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    min-width: 300px;
+  }
+  .mlsc-logo {
+    max-width: 250px;
+  }
+  .right-side {
+    max-width: 600px;
+  }
+  .right-side h1 {
+    font-size: 2.2rem;
+  }
+  .event-section {
+    margin-bottom: 220px;
+    left: 0;
+    padding: 0 3rem;
+  }
+  .gallery-full {
+    margin-top: 150px;
+    height: 600px; /* keep the height you wanted on wide screens */
+  }
+} /* ------------- Accessibility / Reduce motion ------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

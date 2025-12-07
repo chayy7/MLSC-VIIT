@@ -1,46 +1,131 @@
+/* Footer Section */
 .mlsc-footer {
   background: #000;
-  width: 123.5%;
-  padding: 220px 10px;
+  width: 100%;                /* Fix overflow */
+  padding: 270px 20px;         /* Balanced spacing */
   color: #fff;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;        
+  margin: 0 auto;
+}
+
+/* Logo */
+/* .footer-logo img {
+  width: 180px;
+  max-width: 1200px;
+  height: auto;
+  margin-bottom: 25px;
+  /* margin-left: 450px; 
+  object-fit: contain;
+} */
+
+
+.footer-logo {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  width: 100%;
 }
 
 .footer-logo img {
-  max-width: 300px;
-  height: 270px;
+  width: 200px;
+  height: auto;
   margin-bottom: 20px;
+  object-fit: contain;
 }
+
 
 /* Social Icons */
 .footer-social {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  gap: 28px;
   margin: 20px 0;
 }
 
 .footer-social a {
   color: #fff;
-  font-size: 28px;
+  font-size: 32px;
   transition: 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #00a8ff; 
-  transform: scale(1.1);
+  color: #00a8ff;
+  transform: scale(1.12);
 }
 
-/* Footer text */
+/* Footer Text */
 .footer-text {
   margin-top: 15px;
   opacity: 0.7;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-/* Responsive logo size */
+/* ====================== RESPONSIVE ====================== */
+
+/* Tablets */
+/* Tablets */
+@media (max-width: 900px) {
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-social a {
+    font-size: 28px;
+  }
+
+  .mlsc-footer {
+    padding: 70px 20px;
+  }
+}
+
+/* Large Phones */
 @media (max-width: 600px) {
   .footer-logo img {
-    width: 90px;
+    width: 180px;
+  }
+
+  .footer-social a {
+    font-size: 26px;
+  }
+
+  .mlsc-footer {
+    padding: 60px 20px;
+    min-height: 100vh;            /* FULL SCREEN HEIGHT */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-social {
+    gap: 18px;
+  }
+
+  .footer-social a {
+    font-size: 22px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .mlsc-footer {
+    min-height: 100vh;           /* FULL SCREEN HEIGHT */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

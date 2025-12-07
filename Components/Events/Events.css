@@ -8,7 +8,6 @@
   --es-maxWidth: 1100px;
 }
 
-/* Section wrapper */
 .es-section {
   padding: 3.25rem 1.25rem;
   background: var(--es-bg);
@@ -148,6 +147,8 @@
   font-weight: 600;
   font-size: 0.95rem;
 }
+
+
 
 /* Responsive: stack on small screens and always show image above description */
 @media (max-width: 880px) {

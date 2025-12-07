@@ -3,24 +3,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;        
+  align-items: center;
   justify-content: center;
   margin-top: 15rem;
-  margin-left: 130px;
-  /* border-radius: 30px; */
-}
-
-/* Heading */
+   /* margin-left: 130px;  */
+   /* border-radius: 30px; */
+} /* Heading */
 .carousel-heading {
   color: white;
   font-size: clamp(2.7rem, 3.8vw, 2rem);
   font-weight: bold;
   margin-bottom: 1rem;
-  
-  
-}
-
-/* Main carousel container */
+} /* Main carousel container */
 .carousel {
   position: relative;
   display: flex;
@@ -28,12 +22,8 @@
   align-items: center;
   width: 1000px;
   height: 650px;
-  overflow: hidden;
-  /* border-radius: 30px; */
-  
-}
-
-/* Slides */
+  overflow: hidden; /* border-radius: 30px; */
+} /* Slides */
 .slide {
   border-radius: 0.5rem;
   box-shadow: 0px 0px 7px #666;
@@ -41,12 +31,9 @@
   height: 100%;
   object-fit: contain;
 }
-
 .slide-hidden {
   display: none;
-}
-
-/* Arrows */
+} /* Arrows */
 .arrow {
   position: absolute;
   filter: drop-shadow(0px 0px 5px #000);
@@ -54,53 +41,118 @@
   height: 2.5rem;
   color: white;
 }
-
 .arrow:hover {
   cursor: pointer;
   transform: scale(1.03);
   transition: 0.2s;
 }
-
 .arrow-left {
   left: 1rem;
 }
-
 .arrow-right {
   right: 1rem;
-}
-
-/* Indicators */
+} /* Indicators */
 .indicators {
   display: flex;
   position: absolute;
   bottom: 1rem;
 }
-
 .indicator {
   background-color: white;
-  height: 0.1px;          /* very small height */
-  width: 5px;          /* long horizontal line */
-  border-radius: 1px;   
+  height: 0.1px; /* very small height */
+  width: 5px; /* long horizontal line */
+  border-radius: 1px;
   border: none;
   outline: none;
   box-shadow: 0px 0px 5px #555;
   margin: 0 0.25rem;
   cursor: pointer;
 }
-
 .indicator-inactive {
   background-color: grey;
 }
-
 .slide-counter {
   position: absolute;
   bottom: 3rem;
   right: 30rem;
-  padding: 6px 12px;
-  /* background: rgba(0,0,0,0.55); */
+  padding: 6px 12px; /* background: rgba(0,0,0,0.55); */
   color: white;
   font-size: 1rem;
   border-radius: 6px;
-  font-weight: 600;
-  /* backdrop-filter: blur(4px); */
+  font-weight: 600; /* backdrop-filter: blur(4px); */
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .carousel-heading{
+    font-size: 30px;
+    /* margin-bottom: -20px; */
+    /* margin-top: 8rem; */
+  }
+  .carousel {
+    height: 50vh;
+  }
+
+  .arrow {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .carousel-heading {
+    font-size: 2.2rem;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .carousel-heading{
+    font-size: 30px;
+    margin-bottom: -20px;
+    margin-top: 8rem;
+  }
+  .carousel {
+    width: 95%;
+    height: 45vh;
+  }
+
+  .arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .arrow-left {
+    left: 0.5rem;
+  }
+
+  .arrow-right {
+    right: 0.5rem;
+  }
+
+  .slide-counter {
+    right: 10rem;
+    bottom  : 3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .carousel-wrapper {
+    margin-top: 3rem;
+  }
+
+  .carousel {
+    height: 40vh;
+  }
+
+  .arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .slide-counter {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
+import Hyperspeed from "../HyperSpeed/HyperSpeed";
 import "./GalleryPage.css";
 
 const images = [
@@ -19,7 +20,7 @@ const images = [
   "https://i.postimg.cc/7Zv4Vm5r/DSC-0359.jpg-%282%29.jpg",
 ];
 
-// Duplicate to 100 images
+// duplicate up to 100
 while (images.length < 100) {
   images.push(...images);
   if (images.length > 100) images.length = 100;
@@ -27,33 +28,48 @@ while (images.length < 100) {
 
 const GalleryPage = () => {
   return (
-    <div className="w-full">
-
-      {/* ------------------------------------
-          HERO SECTION CENTERED
-      ------------------------------------- */}
-      <div className="hero-section">
-        <div className="scroll-text-wrap">
-          <ScrollVelocity texts={["MLSC GALLERY"]} velocity={-100} numCopies={6} />
-          <ScrollVelocity texts={["MLSC GALLERY"]} velocity={100} numCopies={6} />
-        </div>
-
-        <p className="scroll-down-text">Scroll Down ↓</p>
+    <div className="gallery-page-wrapper">
+      {/* ⭐ Background */}
+      <div className="gallery-bg">
+        <Hyperspeed />
       </div>
 
-      {/* ------------------------------------
-          GALLERY SECTION
-      ------------------------------------- */}
-      <div className="gallery-container">
-        <div className="gallery-grid">
-          {images.map((img, i) => (
-            <div className="gallery-item" key={i}>
-              <img src={img} alt={`img-${i}`} />
-            </div>
-          ))}
+      {/* MAIN CONTENT */}
+      <div className="w-full">
+        {/* ---------- HERO SECTION ---------- */}
+        <div className="hero-section">
+          <div className="scroll-text-wrap">
+            <ScrollVelocity
+              texts={["MLSC GALLERY"]}
+              velocity={-100}
+              numCopies={6}
+            />
+            <ScrollVelocity
+              texts={["MLSC GALLERY"]}
+              velocity={100}
+              numCopies={6}
+            />
+          </div>
+
+          <div className="scroll-down-wrapper">
+            <p className="scroll-down-text">
+  Scroll Down <i className="fa-solid fa-arrow-down scroll-down-icon"></i>
+</p>
+
+          </div>
+        </div>
+
+        {/* ---------- GALLERY ---------- */}
+        <div className="gallery-container">
+          <div className="gallery-grid">
+            {images.map((img, i) => (
+              <div className="gallery-item" key={i}>
+                <img src={img} alt={`img-${i}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
     </div>
   );
 };

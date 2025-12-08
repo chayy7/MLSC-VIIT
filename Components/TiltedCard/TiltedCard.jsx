@@ -130,7 +130,7 @@ export default function TiltedCard({
           }}
         >
           {captionText}
-        </motion.figcaption>
+        </motion.figcaption>  
       )}
     </figure>
   );

@@ -4,9 +4,9 @@ import Teams from "../Teams/Teams";
 export default function TeamsPage() {
   return (
     <div>
-      <header className="app-header">
+      {/* <header className="app-header">
         <h1>Meet Our MLSC Team</h1>
-      </header>
+      </header> */}
       <main>
         <Teams />
       </main>

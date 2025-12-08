@@ -2,11 +2,12 @@ import React from "react";
 import TiltedCard from "../TiltedCard/TiltedCard";
 import teamsData from "../Teams/teamsData";
 import Hyperspeed from "../HyperSpeed/HyperSpeed";
+import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
 import "./Teams.css";
 
 const overlayStyle = {
   color: "#ffffff",
-  backgroundColor: "rgba(62, 62, 62, 0.6)",
+  backgroundColor: "rgba(62,62,62,0.6)",
   padding: "4px 8px",
   borderRadius: "5px",
   position: "relative",
@@ -17,9 +18,21 @@ const overlayStyle = {
 const Teams = ({ data = teamsData }) => {
   return (
     <div className="teams-page-container">
-
-      <div className="background">
+      <div className="teams-bg">
         <Hyperspeed />
+      </div>
+
+      <div className="teams-hero">
+        <div className="scroll-text-wrap">
+          <ScrollVelocity texts={["MLSC TEAM"]} velocity={-100} numCopies={6} />
+          <ScrollVelocity texts={["MLSC TEAM"]} velocity={100} numCopies={6} />
+        </div>
+
+        <div className="scroll-down-wrapper">
+          <p className="scroll-down-text">
+            Scroll Down <i className="fa-solid fa-arrow-down scroll-down-icon"></i>
+          </p>
+        </div>
       </div>
 
       <div className="teams-content">

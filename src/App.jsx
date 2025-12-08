@@ -9,6 +9,8 @@ import MeetTeam from '../Components/MeetTeam/MeetTeam';
 import { Carousel } from '../Components/Carousel/Carousel';
 import Gallery from '../Components/Gallery/Gallery';
 import Footer from "../Components/Footer/Footer";   
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const carouselData = [
   { src: "https://i.postimg.cc/3xmyzhsr/1.png", alt: "slide 1" , link:"https://apply.careers.microsoft.com/careers?query=web+developer&start=0&pid=1970393556626220&sort_by=relevance"},
@@ -23,8 +25,14 @@ const demoItems = [
   { link: '/gallery', text: 'MLSC SPECTRA', image: 'https://i.postimg.cc/N0pRR8M1/DSC-0445-%282%29.jpg' }
 ];
 
-
 function App() {
+
+  // ⭐ SCROLL TO TOP ON ROUTE CHANGE
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="app-container">
       <div className="background">
@@ -48,7 +56,7 @@ function App() {
           { label: 'Linkedin', link: 'https://www.linkedin.com/in/mlsc-viit-671384385/' },
           { label: 'Instagram', link: 'https://www.instagram.com/mlscviit/' },
           { label: 'Youtube', link: 'https://www.youtube.com/@MLSCVIIT' },
-          { label: 'Github', link: 'https://github.com/mlsc-viit' }
+          { label: 'Github', link: 'https://github.com/MlscViit-2025' }
         ]}
         displaySocials={true}
       />
@@ -83,11 +91,7 @@ function App() {
         <Gallery items={demoItems} />
       </div>
 
-      {/* -----------------------------------
-           FOOTER IS ADDED HERE
-      ------------------------------------ */}
       <Footer />
-
     </div>
   );
 }

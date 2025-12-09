@@ -27,7 +27,6 @@ const demoItems = [
 
 function App() {
 
-  // ⭐ SCROLL TO TOP ON ROUTE CHANGE
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,11 +60,11 @@ function App() {
         displaySocials={true}
       />
 
-      <div className="content">
+      <div className="content" id="home">
         <div className="left-side">
           <img src={logo} alt="MLSC Logo" className="mlsc-logo" />
         </div>
-        <div className="right-side">
+        <div className="right-side" >
           <h1>Microsoft Learn <br />Student Community-VIIT</h1>
           <p>
             MLSC is a student-led community that fosters learning, collaboration,
@@ -75,7 +74,7 @@ function App() {
         </div>
       </div>
 
-      <div className="event-section">
+      <div className="event-section" id="events">
         <Events />
       </div>
 
@@ -83,7 +82,7 @@ function App() {
         <MeetTeam />
       </div>
 
-      <div>
+      <div id="jobs">
         <Carousel data={carouselData} />
       </div>
 

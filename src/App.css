@@ -283,3 +283,15 @@ footer,
     margin: 0 auto;       /* Keeps it centered */
   }
 }
+
+
+/* Disable tap highlight (blue on mobile) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* a, p, h1, h2, h3, h4, span, div {
+  color: white !important;
+  text-decoration: none !important;
+} */

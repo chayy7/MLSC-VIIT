@@ -117,3 +117,16 @@
   font-size: 1.1rem;
   color: white;
 }
+
+/* Make only Gallery Page text white */
+.gallery-page-wrapper a,
+.gallery-page-wrapper p,
+.gallery-page-wrapper h1,
+.gallery-page-wrapper h2,
+.gallery-page-wrapper h3,
+.gallery-page-wrapper h4,
+.gallery-page-wrapper span,
+.gallery-page-wrapper div {
+  color: white !important;
+  text-decoration: none !important;
+}

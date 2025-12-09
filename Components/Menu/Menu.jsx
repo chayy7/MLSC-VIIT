@@ -11,7 +11,7 @@ export const StaggeredMenu = ({
   displayItemNumbering = true,
   className,
   menuButtonColor = '#fff',
-  openMenuButtonColor = '#000',   // 🔥 CHANGED: open menu = black
+  openMenuButtonColor = '#000',
   accentColor = '#5227FF',
   changeMenuColorOnOpen = true,
   isFixed = false,
@@ -33,7 +33,6 @@ export const StaggeredMenu = ({
   const closeTweenRef = useRef(null);
   const spinTweenRef = useRef(null);
   const textCycleAnimRef = useRef(null);
-  const colorTweenRef = useRef(null);
   const toggleBtnRef = useRef(null);
   const busyRef = useRef(false);
 
@@ -255,6 +254,13 @@ export const StaggeredMenu = ({
     });
   }, []);
 
+  // 🔥 CLOSE MENU WHEN CLICKING ANY MENU ITEM
+  const handleItemClick = () => {
+    if (openRef.current) {
+      toggleMenu(); // closes menu
+    }
+  };
+
   const toggleMenu = useCallback(() => {
     const target = !openRef.current;
     openRef.current = target;
@@ -278,7 +284,7 @@ export const StaggeredMenu = ({
       className={(className ? className + ' ' : '') + 'staggered-menu-wrapper' + (isFixed ? ' fixed-wrapper' : '')}
       style={accentColor ? { ['--sm-accent']: accentColor } : undefined}
       data-position={position}
-      data-open={open ? 'true' : 'false'}   // 🔥 THIS IS THE FIX
+      data-open={open ? 'true' : 'false'}
     >
       <div ref={preLayersRef} className="sm-prelayers" aria-hidden="true">
         {colors.map((c, i) => (
@@ -320,6 +326,7 @@ export const StaggeredMenu = ({
                   <a
                     className="sm-panel-item"
                     href={it.link}
+                    onClick={handleItemClick}     // 🔥 AUTO CLOSES MENU
                     style={{ '--sm-num': `"${String(idx + 1).padStart(2, '0')}"` }}
                   >
                     <span className="sm-panel-itemLabel">{it.label}</span>
@@ -339,7 +346,13 @@ export const StaggeredMenu = ({
               <ul className="sm-socials-list" role="list">
                 {socialItems.map((s, i) => (
                   <li key={i} className="sm-socials-item">
-                    <a href={s.link} target="_blank" rel="noopener noreferrer" className="sm-socials-link">
+                    <a
+                      href={s.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sm-socials-link"
+                      onClick={handleItemClick}   // 🔥 also close when opening socials
+                    >
                       {s.label}
                     </a>
                   </li>

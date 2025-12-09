@@ -1,34 +1,26 @@
 .meet-team-hero {
   position: relative;
-  width: 100%;           /* full viewport width */
-  height: 100vh;          /* full viewport height */
+  width: 100%;
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 0;              /* remove any default margin */
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-
-
 /* FULLY RESPONSIVE BACKGROUND IMAGE */
 .meet-team-bg {
-
   position: absolute;
   inset: 0;
-
   background-repeat: no-repeat;
-  background-size: cover;        /* FIX: image fits all screens */
-  background-position: center;   /* centers important part */
-
+  background-size: cover;
+  background-position: center;
   transform: scale(1.05);
   transition: transform 600ms ease;
 }
-
-
 
 /* DARK GRADIENT LAYER */
 .meet-team-overlay {
@@ -71,8 +63,6 @@
 }
 
 /* CTA BUTTON */
-
-
 .meet-team-cta {
   display: inline-flex;
   align-items: center;
@@ -94,18 +84,36 @@
   box-shadow: 0 14px 30px rgba(0,0,0,0.45);
 }
 
-/* MOBILE VIEW */
 @media (max-width: 780px) {
-  .meet-team-sub { 
-    /* display: none; */
-    font-size: 1rem; 
+
+  /* Keep hero full screen on mobile */
+  .meet-team-hero {
+    height: 30vh;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;  /* center vertically */
+    align-items: center;       /* center horizontally */
+    text-align: center;
   }
-  .meet-team-hero { 
-    height: 300px; 
-    width: 400px;
-    /* object-fit: cover; */
+
+  /* Center content perfectly */
+  .meet-team-content {
+    padding: 0 1rem;
+    width: 100%;
   }
+
   .meet-team-title { 
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
+  }
+
+  .meet-team-sub { 
+    font-size: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .meet-team-cta {
+    font-size: 0.65rem;
+    padding: 0.6rem 1rem;
   }
 }

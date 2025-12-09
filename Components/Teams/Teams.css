@@ -90,26 +90,6 @@
 
 /* Mobile Devices */
 @media (max-width: 768px) {
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  .teams-page-container {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  .teams-hero {
-    height: auto;
-    padding-top: 60px;
-  }
-
-  .teams-content {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
   .teams-hero {
     height: 90vh;
     gap: 15px;
@@ -139,4 +119,17 @@
     gap: 15px;
     padding: 0 5px;
   }
+}
+
+
+.teams-page-container a,
+.teams-page-container p,
+.teams-page-container h1,
+.teams-page-container h2,
+.teams-page-container h3,
+.teams-page-container h4,
+.teams-page-container span,
+.teams-page-container div {
+color: white !important;
+text-decoration: none !important;
 }

@@ -7,9 +7,8 @@
   justify-content: center;
   margin-top: 15rem;
   position: relative;
-   /* margin-left: 130px;  */
-   /* border-radius: 30px; */
-} /* Heading */
+}
+
 .carousel-heading {
   color: white !important;
   font-size: clamp(2.7rem, 3.8vw, 2rem);

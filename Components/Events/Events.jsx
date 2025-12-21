@@ -1,17 +1,13 @@
 import React from 'react';
 import EventsSection from './EventsSection';
-/**
- * Events wrapper — supplies sample data to EventSection.
- * Replace arrays with your real event data or fetch dynamically.
- */
+
 const upcoming = [
   {
     id: 'u1',
     title: 'Upcoming Event',
     date: '404',
     location: 'Main Auditorium',
-    description:
-      'Upcoming Event',
+    description: 'Upcoming Event',
     image: 'https://i.postimg.cc/Jnf4Q9Rv/Untitled-design.jpg',
     ctaLabel: 'Register',
     ctaLink: '#',
@@ -37,6 +33,16 @@ const past = [
     description:
       'Celebrating new beginnings and inspiring journeys at our Inaugural Ceremony.',
     image: 'https://i.postimg.cc/ZnTNXpJ8/DSC-0461-1.jpg',
+  },
+  {
+    id: 'p2',
+    title: 'Microsoft Azure Tech Workshop',
+    date: '2025-12-17',
+    location: 'Vikram Sarabhai Seminar Hall',
+    speakers: ['Zaara Nasim', 'N Varshith', 'J Venkat Sai'],
+    description:
+      'A hands-on workshop covering Azure fundamentals and cloud deployment.',
+    image: 'https://i.postimg.cc/tRmQ88ZK/file-000000008e347206b419a707e5070ee3.png',
   },
 ];
 

@@ -172,3 +172,16 @@
 .es-block + .es-block {
   margin-top: 2.5rem;
 }
+
+.es-eventSpeakers {
+  margin: 0.4rem 0 0.2rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+}
+
+.es-eventDesc {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+

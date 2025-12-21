@@ -41,7 +41,7 @@ const past = [
     location: 'Vikram Sarabhai Seminar Hall',
     speakers: ['Zaara Nasim', 'N Varshith', 'J Venkat Sai'],
     description:
-      'A hands-on workshop covering Azure fundamentals and cloud deployment.',
+      'An Interactive Workshop introducing Azure Fundamentals and Practical Cloud Deployment.',
     image: 'https://i.postimg.cc/tRmQ88ZK/file-000000008e347206b419a707e5070ee3.png',
   },
 ];
